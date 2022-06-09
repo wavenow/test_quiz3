@@ -1,4 +1,4 @@
-// puppeteer on WSL2
+// puppeteer on WSL2cd
 
 const puppeteer = require('puppeteer');
 
@@ -17,7 +17,7 @@ async function scrape() {
    await page.click('input[type="button"]');
    var element = await page.waitForSelector("table");
    var text = await page.evaluate(element => element.textContent, element);
-   var [element] = await page.$x(".//td[contains(., '" + fund + "')]");
+   var [element] = await page.$x(".//td[text()='" + fund + "']");
 
    //Found
    if (element) {
