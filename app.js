@@ -13,7 +13,7 @@ async function scrape() {
       console.log("Please input the fund quote. Eg. B-FUTURESSF");
       process.exit();
    }else{
-      fund = fund[0];
+      fund = fund[0].toUpperCase();
    }
 
 
