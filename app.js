@@ -17,8 +17,6 @@ async function scrape() {
         console.log('Could not connect to codequiz - ' + e);
         process.exit();
    }
-  
-   const selector = 'p' // 
 
    try{
       var element = await page.waitForSelector("p");
@@ -28,6 +26,7 @@ async function scrape() {
       console.log('The page might changed - ' + e);
       process.exit();
    }
+   //
   
 
    //second page
@@ -48,6 +47,7 @@ async function scrape() {
       console.log('The page might changed - ' + e);
       process.exit();
    }
+   //
 
    browser.close();
 }
