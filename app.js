@@ -7,7 +7,14 @@ async function scrape() {
    const page = await browser.newPage();
    page.setDefaultTimeout(2000);
    var fund = process.argv.slice(2);
-   let nav = "Fund does not exists.";
+   let nav = "Fund does not exists. ";
+
+   if (fund == "") {
+      console.log("Please input the fund quote. Eg. B-FUTURESSF");
+      process.exit();
+   }else{
+      fund = fund[0];
+   }
 
 
    //first page
